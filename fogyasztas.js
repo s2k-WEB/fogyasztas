@@ -1,15 +1,26 @@
 var km = "";
+var tankolas = "";
 
 do {
     km = prompt("Hány kilométert mentél ?");
-} while(!isNumber(km));
+} while(!isNumber(km) || km > 1000)
 
-if (km <= 1000) {
-    window.onload = function() {
-        document.getElementById("fogyi").innerHTML = `Fogyasztás: ${km} km.`;
-    };
+do {
+    tankolas = prompt("Hány litert tankoltál ?");
+} while(!isNumber(tankolas) || tankolas <= 1 || tankolas > 50)
 
-}
+
+
+
+
+
+window.onload = function() {document.getElementById("fogyi").innerHTML = `Fogyasztás: ${km} km. ${tankolas}`};
+
+// if (km <= 1000) {
+//     window.onload = function() {
+//         document.getElementById("fogyi").innerHTML = `Fogyasztás: ${km} km.`;
+//     };
+// }
 
 function isNumber(value) {
     var pattern = /^[0-9]+$/;
