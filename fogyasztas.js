@@ -16,8 +16,15 @@ do {
     tankolas = prompt("Hány litert tankoltál ?");
 } while(!isNumber(tankolas) || tankolas <= 1 || tankolas > 50)
 
-window.onload = function() {document.getElementById("fogyi").innerHTML = `Fogyasztás<br><br>${autok.fogyaszt()}`};
-
+window.onload = function() {
+    var stuff = document.getElementsByTagName("body")[0];
+    stuff.appendChild(document.createTextNode(`${autok.fogyaszt()}`));
+    stuff.appendChild(document.createElement("br"));
+    if (tankolas > 20) {
+        stuff.appendChild(document.createTextNode(`Nem sajnálod az üzemanyagot !`));
+        stuff.appendChild(document.createElement("br"));
+    }
+};
 
 function isNumber(value) {
     var pattern = /^[0-9]+$/;
