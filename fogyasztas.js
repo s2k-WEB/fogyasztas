@@ -23,13 +23,16 @@ window.onload = function() {
     if (tankolas > 20) {
         stuff.appendChild(document.createTextNode(`Nem sajnálod az üzemanyagot !`));
         stuff.appendChild(document.createElement("br"));
-    }
+    };
     if (km > 700) {
         stuff.appendChild(document.createTextNode(`Nem kellene ennyit utaznod !`));
         stuff.appendChild(document.createElement("br"));
     } else {
         stuff.appendChild(document.createTextNode(`Csak így tovább !`));
         stuff.appendChild(document.createElement("br"));
+    };
+    autok.garazs = function(utca){
+        return `${autok.automarka} ${utca} utcában található.`;
     }
 };
 
