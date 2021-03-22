@@ -1,6 +1,14 @@
 var km = "";
 var tankolas = "";
 
+var autok = {
+    evjarat : "1980",
+    automarka : "Saab",
+    // fullName : function() {
+    //   return this.firstName + " " + this.lastName;
+    // }
+  };
+
 do {
     km = prompt("Hány kilométert mentél ?");
 } while(!isNumber(km) || km > 1000)
