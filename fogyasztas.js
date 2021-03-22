@@ -34,6 +34,8 @@ window.onload = function() {
     autok.garazs = function(utca){
         return `${autok.automarka} ${utca} utcában található.`;
     }
+    stuff.appendChild(document.createTextNode(autok.garazs("Humpalumpa")));
+    stuff.appendChild(document.createElement("br"));
 };
 
 function isNumber(value) {
