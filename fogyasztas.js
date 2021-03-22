@@ -24,6 +24,13 @@ window.onload = function() {
         stuff.appendChild(document.createTextNode(`Nem sajnálod az üzemanyagot !`));
         stuff.appendChild(document.createElement("br"));
     }
+    if (km > 700) {
+        stuff.appendChild(document.createTextNode(`Nem kellene ennyit utaznod !`));
+        stuff.appendChild(document.createElement("br"));
+    } else {
+        stuff.appendChild(document.createTextNode(`Csak így tovább !`));
+        stuff.appendChild(document.createElement("br"));
+    }
 };
 
 function isNumber(value) {
