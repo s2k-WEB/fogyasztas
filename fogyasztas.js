@@ -32,10 +32,15 @@ window.onload = function() {
         stuff.appendChild(document.createElement("br"));
     };
     autok.garazs = function(utca){
-        return `${autok.automarka} ${utca} utcában található.`;
+        return `A ${this.automarka} ${utca} utcában található.`;
     }
     stuff.appendChild(document.createTextNode(autok.garazs("Humpalumpa")));
     stuff.appendChild(document.createElement("br"));
+    stuff.appendChild(document.createElement("br"));
+    for (const [key, value] of Object.entries(autok)) {
+        stuff.appendChild(document.createTextNode(`${key}: ${value}`));
+        stuff.appendChild(document.createElement("br"));
+      }
 };
 
 function isNumber(value) {
